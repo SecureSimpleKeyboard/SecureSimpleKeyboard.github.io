@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureSimpleKeyboard</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #d3d3d3;
+            font-family: Roboto, "Segoe UI", Arial, sans-serif;
+            color: #d90429;
+            text-align: center;
+        }
+
+        header {
+            background: #d90429;
+            color: white;
+            padding: 35px 20px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: clamp(22px, 7vw, 32px);
+            font-weight: 700;
+            overflow-wrap: anywhere;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            font-size: 19px;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+
+        .button-container {
+            margin-top: 40px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 16px 40px;
+            border-radius: 8px;
+            background: #d90429;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(217, 4, 41, 0.3);
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        .download-btn:hover {
+            background: #b00321;
+            transform: translateY(-2px);
+        }
+
+        .download-btn:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>SecureSimpleKeyboard</h1>
+</header>
+
+<main>
+    <p id="description"></p>
+
+    <div class="button-container">
+        <a
+            href="https://github.com/SecureSimpleKeyboard/SecureSimpleKeyboard/releases/latest/download/app-release.apk"
+            class="download-btn"
+            id="download"
+        ></a>
+    </div>
+</main>
+
+<script>
+    const translations = {
+        en: {
+            title: "SecureSimpleKeyboard",
+            description: "SecureSimpleKeyboard - a fork of the Simple Keyboard with additional features: screenshot blocking, Duress Password, emoji panel",
+            download: "Download"
+        },
+        ru: {
+            title: "SecureSimpleKeyboard",
+            description: "SecureSimpleKeyboard — ветка проекта Simple Keyboard с дополнительными функциями: блокировка скриншотов, Duress Password, панель эмодзи",
+            download: "Скачать"
+        }
+    };
+
+    const lang = (navigator.language || "en")
+        .slice(0, 2)
+        .toLowerCase();
+
+    const t = translations[lang] || translations.en;
+
+    document.documentElement.lang = translations[lang] ? lang : "en";
+    document.title = t.title;
+
+    document.getElementById("description").textContent = t.description;
+    document.getElementById("download").textContent = t.download;
+</script>
+
+</body>
+</html>

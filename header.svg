@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="591.5" viewBox="0 0 840 591.5">
+  <rect width="840" height="591.5" fill="#d3d3d3"/>
+  <rect width="840" height="192.5" fill="#d90429"/>
+
+  <text x="420" y="96.25" text-anchor="middle" dominant-baseline="middle"
+        font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="73" font-weight="700" fill="#ffffff">SecureSimpleKeyboard</text>
+
+  <g font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+     font-size="45" font-weight="530"
+     fill="#d90429" text-anchor="middle">
+    <text x="427" y="300">SecureSimpleKeyboard - a fork of the</text>
+    <text x="430" y="370">Simple Keyboard with additional</text>
+    <text x="430" y="435">features: screenshot blocking,</text>
+    <text x="430" y="499">Duress Password, emoji panel</text>
+  </g>
+</svg>
